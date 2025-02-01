@@ -1,5 +1,5 @@
-import React from 'react';
-import { ButtonContainer, ButtonText } from './styles';
+import React from "react";
+import { ButtonContainer, ButtonText } from "./styles";
 
 interface ButtonProps {
   title: string;

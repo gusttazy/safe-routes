@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
-import theme from '../../styles/theme';
+import styled from "styled-components/native";
+import theme from "../../styles/theme";
 
 export const SafeContainer = styled.SafeAreaView`
   flex: 1;
@@ -28,15 +28,17 @@ export const Title = styled.Text`
   margin-bottom: 10px;
 `;
 
-export const ForgotPasswordButton = styled.TouchableOpacity`
-  margin-top: 15px;
-  align-self: center;
+export const DontHaveAccount = styled.Text`
+  font-family: ${theme.fonts.regular};
+  font-size: 13px;
+  color: ${theme.colors.text};
+  margin-top: 20px;
+  text-align: center;
 `;
 
-export const ForgotPasswordText = styled.Text`
+export const RegisterText = styled.Text`
   font-family: ${theme.fonts.bold};
   color: ${theme.colors.greenPrimary};
-  font-size: 14px;
 `;
 
 export const SubTitle = styled.Text`

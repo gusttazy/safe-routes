@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components/native';
-import theme from '../../styles/theme';
+import styled, { css } from "styled-components/native";
+import theme from "../../styles/theme";
 
 export const Container = styled.View`
   width: 100%;
@@ -26,7 +26,7 @@ export const StyledTextInput = styled.TextInput<StyledTextInputProps>`
   font-family: ${theme.fonts.regular};
   font-size: 16px;
   color: ${theme.colors.textSecondary};
-  ${props =>
+  ${(props) =>
     props.isFocused &&
     css`
       shadow-color: #000;

@@ -1,6 +1,14 @@
-import React from 'react';
-import { SafeContainer, HeaderImage, ContentContainer, Title, Description, AlreadyAccount, LoginText } from './styles';
-import Button from '../../components/Button';
+import React from "react";
+import {
+  SafeContainer,
+  HeaderImage,
+  ContentContainer,
+  Title,
+  Description,
+  AlreadyAccount,
+  LoginText,
+} from "./styles";
+import Button from "../../components/Button";
 
 const Home: React.FC = () => {
   const handlePress = () => {
@@ -9,7 +17,7 @@ const Home: React.FC = () => {
 
   return (
     <SafeContainer>
-      <HeaderImage source={require('../../../assets/images/header.jpg')} />
+      <HeaderImage source={require("../../../assets/images/header.jpg")} />
 
       <ContentContainer>
         <Title>Bem-vindo ao SafeRoutes</Title>

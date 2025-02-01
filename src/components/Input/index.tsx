@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Container, Label, StyledTextInput } from './styles';
+import React, { useState } from "react";
+import { Container, Label, StyledTextInput } from "./styles";
 
 interface InputProps {
   label: string;
   value: string;
   onChangeText: (text: string) => void;
   placeholder?: string;
-  keyboardType?: 'default' | 'email-address' | 'numeric' | 'phone-pad';
+  keyboardType?: "default" | "email-address" | "numeric" | "phone-pad";
   secureTextEntry?: boolean;
 }
 
@@ -15,7 +15,7 @@ const Input: React.FC<InputProps> = ({
   value,
   onChangeText,
   placeholder,
-  keyboardType = 'default',
+  keyboardType = "default",
   secureTextEntry = false,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
