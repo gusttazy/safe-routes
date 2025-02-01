@@ -1,27 +1,17 @@
 import styled from 'styled-components/native';
 import theme from '../../styles/theme';
 
-interface ButtonContainerProps {
-  backgroundColor: string;
-  borderRadius: string;
-  padding: string;
-}
-
-export const ButtonContainer = styled.TouchableOpacity<ButtonContainerProps>`
-  background-color: ${({ backgroundColor }) => backgroundColor};
-  padding: ${({ padding }) => padding};
-  border-radius: ${({ borderRadius }) => borderRadius};
+export const ButtonContainer = styled.TouchableOpacity`
+  background-color: ${theme.colors.greenPrimary};
+  padding: 15px;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 20px;
 `;
 
-interface ButtonTextProps {
-  textColor: string;
-}
-
-export const ButtonText = styled.Text<ButtonTextProps>`
+export const ButtonText = styled.Text`
   font-family: ${theme.fonts.bold};
-  color: ${({ textColor }) => textColor};
   font-size: 18px;
+  color: ${theme.colors.inputWhite};
 `;
