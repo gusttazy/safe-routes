@@ -1,8 +1,6 @@
-// src/screens/Home/index.tsx
-import React from "react";
-import { SafeAreaView } from "react-native";
-import { Box, ImageHeader, Container, WelcomeText, SubText, JaPossuiConta, Entrar } from "./styles";
-import Button from "../../components/Button";  
+import React from 'react';
+import { SafeContainer, HeaderImage, ContentContainer, Title, Description, AlreadyAccount, LoginText } from './styles';
+import Button from '../../components/Button';
 
 const Home: React.FC = () => {
   const handlePress = () => {
@@ -10,31 +8,23 @@ const Home: React.FC = () => {
   };
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <ImageHeader 
-        source={require("../../../assets/images/header.jpg")} 
-      />
+    <SafeContainer>
+      <HeaderImage source={require('../../../assets/images/header.jpg')} />
 
-      <Box />
-
-      <Container>
-        <WelcomeText>Bem-vindo ao SafeRoutes</WelcomeText>
-        <SubText>
+      <ContentContainer>
+        <Title>Bem-vindo ao SafeRoutes</Title>
+        <Description>
           Garanta uma viagem segura e tranquila, com alertas em tempo real e
           monitoramento constante.
-        </SubText>
+        </Description>
 
-        <Button 
-          title="Começar Agora" 
-          onPress={handlePress}  
-        />
+        <Button title="Começar Agora" onPress={handlePress} />
 
-        <JaPossuiConta>
-          Ja possui uma conta? <Entrar>Faça Login</Entrar>
-        </JaPossuiConta>
-
-      </Container>
-    </SafeAreaView>
+        <AlreadyAccount>
+          Já possui uma conta? <LoginText>Faça Login</LoginText>
+        </AlreadyAccount>
+      </ContentContainer>
+    </SafeContainer>
   );
 };
 

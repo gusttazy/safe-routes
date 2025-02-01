@@ -1,3 +1,4 @@
+// src/components/Button/index.tsx
 import React from 'react';
 import { ButtonContainer, ButtonText } from './styles';
 
@@ -13,10 +14,10 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({
   title,
   onPress,
-  backgroundColor = '#297152',  
-  textColor = '#fff',  
-  padding = '15px',  
-  borderRadius = '5px',  
+  backgroundColor = '#297152',
+  textColor = '#fff',
+  padding = '15px',
+  borderRadius = '5px',
 }) => {
   return (
     <ButtonContainer

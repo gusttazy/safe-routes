@@ -1,49 +1,52 @@
-import theme from '../../styles/theme';
 import styled from 'styled-components/native';
+import theme from '../../styles/theme';
 
-export const Box = styled.View`
+export const SafeContainer = styled.SafeAreaView`
+  flex: 1;
   background-color: ${theme.colors.background};
 `;
 
-export const ImageHeader = styled.Image`
+export const HeaderImage = styled.Image`
   width: 100%;
   height: 55%;
   resize-mode: cover;
 `;
 
-export const Container = styled.View` 
+export const ContentContainer = styled.View`
   flex: 1;
-  justify-content: flex-start;  
-  align-items: center;
   background-color: ${theme.colors.background};
+  margin-top: -20px; /* Sobreposição da imagem */
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding: 30px 20px;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const WelcomeText = styled.Text`
-  font-family: ${theme.fonts.extrabold};  
+export const Title = styled.Text`
+  font-family: ${theme.fonts.extrabold};
   font-size: 45px;
-  color: ${theme.colors.greenPrimary};  
+  color: ${theme.colors.greenPrimary};
   text-align: center;
-  margin-top: 5px;
 `;
 
-export const SubText = styled.Text`
-  font-family: ${theme.fonts.regular};  
+export const Description = styled.Text`
+  font-family: ${theme.fonts.regular};
   font-size: 13px;
-  color: ${theme.colors.text};  
+  color: ${theme.colors.text};
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
   width: 70%;
 `;
 
-export const JaPossuiConta = styled.Text`
+export const AlreadyAccount = styled.Text`
   font-family: ${theme.fonts.regular};
   font-size: 13px;
   color: ${theme.colors.text};
   margin-top: 10px;
 `;
 
-export const Entrar = styled.Text`
+export const LoginText = styled.Text`
   font-family: ${theme.fonts.bold};
   color: ${theme.colors.greenPrimary};
-  
 `;

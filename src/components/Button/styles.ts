@@ -1,13 +1,13 @@
 import styled from 'styled-components/native';
 import theme from '../../styles/theme';
 
-interface ButtonProps {
+interface ButtonContainerProps {
   backgroundColor: string;
   borderRadius: string;
   padding: string;
 }
 
-export const ButtonContainer = styled.TouchableOpacity<ButtonProps>`
+export const ButtonContainer = styled.TouchableOpacity<ButtonContainerProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   padding: ${({ padding }) => padding};
   border-radius: ${({ borderRadius }) => borderRadius};
@@ -16,8 +16,12 @@ export const ButtonContainer = styled.TouchableOpacity<ButtonProps>`
   margin-top: 80px;
 `;
 
-export const ButtonText = styled.Text<{ textColor: string }>`
+interface ButtonTextProps {
+  textColor: string;
+}
+
+export const ButtonText = styled.Text<ButtonTextProps>`
   font-family: ${theme.fonts.bold};
-  color: ${theme.colors.background};
+  color: ${({ textColor }) => textColor};
   font-size: 18px;
 `;
