@@ -29,7 +29,6 @@ const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         keyboardType={keyboardType}
         secureTextEntry={secureTextEntry}
-        placeholderTextColor="#999"
         isFocused={isFocused}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}

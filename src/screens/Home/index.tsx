@@ -9,10 +9,24 @@ import {
   LoginText,
 } from "./styles";
 import Button from "../../components/Button";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../routes";
+
+type HomeScreenNavigationProp = NativeStackNavigationProp<
+  RootStackParamList,
+  "Home"
+>;
 
 const Home: React.FC = () => {
+  const navigation = useNavigation<HomeScreenNavigationProp>();
+
   const handlePress = () => {
     console.log("Botão pressionado");
+  };
+
+  const handleLoginNavigate = () => {
+    navigation.navigate("Login");
   };
 
   return (
@@ -29,7 +43,8 @@ const Home: React.FC = () => {
         <Button title="Começar Agora" onPress={handlePress} />
 
         <AlreadyAccount>
-          Já possui uma conta? <LoginText>Faça Login</LoginText>
+          Já possui uma conta?{" "}
+          <LoginText onPress={handleLoginNavigate}>Faça Login</LoginText>
         </AlreadyAccount>
       </ContentContainer>
     </SafeContainer>

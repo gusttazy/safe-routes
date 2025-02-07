@@ -1,12 +1,13 @@
-import React from 'react';
-import { AppProvider } from './src/providers/AppProvider';
-import Home from './src/screens/Home';
-import Login from './src/screens/Login';
+import React from "react";
+import Routes from "./src/routes";
+import { AppProvider } from "./src/providers/AppProvider";
+import { StatusBar } from "expo-status-bar";
 
 export default function App() {
   return (
     <AppProvider>
-      <Login />
+      <StatusBar/>
+      <Routes/>
     </AppProvider>
   );
-};
+}

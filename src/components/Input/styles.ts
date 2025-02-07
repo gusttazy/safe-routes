@@ -26,13 +26,4 @@ export const StyledTextInput = styled.TextInput<StyledTextInputProps>`
   font-family: ${theme.fonts.regular};
   font-size: 16px;
   color: ${theme.colors.textSecondary};
-  ${(props) =>
-    props.isFocused &&
-    css`
-      shadow-color: #000;
-      shadow-offset: 0px 2px;
-      shadow-opacity: 0.25;
-      shadow-radius: 3.84px;
-      elevation: 5;
-    `}
 `;
