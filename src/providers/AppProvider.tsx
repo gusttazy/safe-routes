@@ -14,7 +14,9 @@ interface AppProviderProps {
   children: ReactNode;
 }
 
-export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
+SplashScreen.preventAutoHideAsync();
+
+export function AppProvider({ children }: AppProviderProps) {
   const [fontsLoaded] = useFonts({
     Montserrat_400Regular,
     Montserrat_700Bold,
@@ -24,25 +26,19 @@ export const AppProvider: React.FC<AppProviderProps> = ({ children }) => {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    const prepare = async () => {
-      await SplashScreen.preventAutoHideAsync();
+    async function prepare() {
       if (fontsLoaded) {
         setIsReady(true);
+        await SplashScreen.hideAsync();
       }
-    };
+    }
 
     prepare();
   }, [fontsLoaded]);
 
-  useEffect(() => {
-    if (isReady) {
-      SplashScreen.hideAsync();
-    }
-  }, [isReady]);
-
   if (!isReady) {
-    return null; // Isso mantém a splash screen até que as fontes sejam carregadas
+    return null; // Mantém a splash screen até que tudo esteja pronto
   }
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
-};
+}
