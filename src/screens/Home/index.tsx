@@ -21,8 +21,8 @@ type HomeScreenNavigationProp = NativeStackNavigationProp<
 const Home: React.FC = () => {
   const navigation = useNavigation<HomeScreenNavigationProp>();
 
-  const handlePress = () => {
-    console.log("Botão pressionado");
+  const handleRegisterNavigate = () => {
+    navigation.navigate("Register");
   };
 
   const handleLoginNavigate = () => {
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           monitoramento constante.
         </Description>
 
-        <Button title="Começar Agora" onPress={handlePress} />
+        <Button title="Começar Agora" onPress={handleRegisterNavigate} />
 
         <AlreadyAccount>
           Já possui uma conta?{" "}

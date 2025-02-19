@@ -1,16 +1,15 @@
 import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { Easing } from "react-native";
-
-// Importação das telas
 import Home from "../screens/Home";
 import Login from "../screens/Login";
+import Register from "../screens/Register"; 
 
-// Tipagem das rotas
+
 export type RootStackParamList = {
   Home: undefined;
   Login: undefined;
+  Register: undefined; 
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -21,30 +20,14 @@ const Routes = () => {
       <Stack.Navigator
         initialRouteName="Home"
         screenOptions={{
-          headerShown: false, 
-          gestureEnabled: true, 
-          animation: "fade", 
-          // Configura a transição para a animação de fade
-          transitionSpec: {
-            open: {
-              animation: "timing",
-              config: {
-                duration: 500,
-                easing: Easing.ease,
-              },
-            },
-            close: {
-              animation: "timing",
-              config: {
-                duration: 300,
-                easing: Easing.ease,
-              },
-            },
-          },
+          headerShown: false,
+          gestureEnabled: true,
+          animation: "fade",
         }}
       >
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Register" component={Register} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );

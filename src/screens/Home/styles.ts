@@ -15,7 +15,7 @@ export const HeaderImage = styled.Image`
 export const ContentContainer = styled.View`
   flex: 1;
   background-color: ${theme.colors.background};
-  margin-top: -30px; /* Sobreposição da imagem */
+  margin-top: -30px; 
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
   padding: 30px 20px;

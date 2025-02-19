@@ -8,11 +8,12 @@ export const SafeContainer = styled.SafeAreaView`
   align-items: center;
 `;
 
-export const CardContainer = styled.View`
+export const CardContainer = styled.SafeAreaView` 
   width: 90%;
+  max-height: 80%; 
   background-color: ${theme.colors.background};
   border-radius: 8px;
-  padding: 30px 30px;
+  padding: 20px; 
 `;
 
 export const Title = styled.Text`
@@ -21,6 +22,14 @@ export const Title = styled.Text`
   color: ${theme.colors.greenPrimary};
   text-align: center;
   margin-bottom: 10px;
+`;
+
+export const SubTitle = styled.Text`
+  font-family: ${theme.fonts.regular};
+  color: ${theme.colors.textSecondary};
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
 `;
 
 export const DontHaveAccount = styled.Text`
@@ -36,10 +45,7 @@ export const RegisterText = styled.Text`
   color: ${theme.colors.greenPrimary};
 `;
 
-export const SubTitle = styled.Text`
-  font-family: ${theme.fonts.regular};
-  color: ${theme.colors.textSecondary};
-  text-align: center;
-  font-size: 14px;
-  margin-bottom: 20px;
+export const InputContainer = styled.View`
+  
 `;
+
